@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,7 +19,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #202124;
-  color: white;
+  color: #222;
   font-family: Arial, sans-serif;
 
   display: flex;
@@ -30,46 +29,52 @@ body {
   padding: 20px;
 }
 
+/* Carré blanc au centre */
 .card {
-  background: rgba(35, 37, 42, 0.88);
-  padding: 30px;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 14px;
+  background: white;
+  padding: 35px;
+  border: none;
+  border-radius: 18px;
   width: 100%;
-  max-width: 360px;
+  max-width: 460px;
   text-align: center;
-  backdrop-filter: blur(8px);
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 38px;
   margin-top: 0;
   letter-spacing: 2px;
+  color: #222;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .notice {
-  color: #ffd166;
+  color: #666;
   font-size: 13px;
   line-height: 1.5;
 }
 
 input, button {
   width: 100%;
-  padding: 13px;
+  padding: 15px;
   margin: 8px 0;
-  border-radius: 7px;
+  border-radius: 8px;
   font-size: 15px;
 }
 
 input {
-  border: 1px solid #777;
-  background: #fff;
+  border: 1px solid #ccc;
+  background: white;
   color: #222;
 }
 
 button {
-  background: #00a2ff;
+  background: #252525;
   color: white;
   border: none;
   font-weight: bold;
@@ -77,12 +82,12 @@ button {
 }
 
 button:hover {
-  background: #0085d1;
+  background: #444;
 }
 
 footer {
   font-size: 11px;
-  color: #ccc;
+  color: #777;
   margin-top: 20px;
 }
 </style>
@@ -94,18 +99,16 @@ footer {
 
   <h1>GAMING</h1>
 
-  <p class="notice">
-    SIMULATION ÉDUCATIVE
-  </p>
+  <h2>Connexion démo</h2>
 
-  <p>
+  <p class="notice">
     Bienvenue dans notre démonstration !
   </p>
 
   <input
     type="text"
     id="pseudo"
-    placeholder="Identifiant ou Pseudo"
+    placeholder="Entre un pseudo fictif"
     maxlength="20"
   >
 
@@ -143,4 +146,3 @@ function demonstration() {
 </body>
 </html>
 
-</html>
