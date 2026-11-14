@@ -1,68 +1,146 @@
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Simulation Roblox</title>
+<title>Démo éducative gaming</title>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
- background-image: url("fond-roblox.png");
+  margin: 0;
+  background-image: url("fond-roblox.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: #202124;
   color: white;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 20px;
 }
+
 .card {
-  background: #393b3e;
+  background: rgba(35, 37, 42, 0.88);
   padding: 30px;
-  border-radius: 12px;
-  width: 300px;
-  text-align: center;
-}
-input, button {
-  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 6px;
+  max-width: 360px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
+
+h1 {
+  font-size: 36px;
+  margin-top: 0;
+  letter-spacing: 2px;
+}
+
+.notice {
+  color: #ffd166;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+input, button {
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
 input {
   border: 1px solid #777;
+  background: #fff;
+  color: #222;
 }
+
 button {
   background: #00a2ff;
   color: white;
   border: none;
+  font-weight: bold;
   cursor: pointer;
 }
-.notice {
-  color: #ffd166;
-  font-size: 13px;
+
+button:hover {
+  background: #0085d1;
+}
+
+footer {
+  font-size: 11px;
+  color: #ccc;
+  margin-top: 20px;
 }
 </style>
 </head>
+
 <body>
+
 <div class="card">
-  <h1>ROBLOX</h1>
-  <p class="notice">SIMULATION ÉDUCATIVE</p>
-  <p>Page de démonstration</p>
 
-  <input placeholder="Nom fictif (ex: Joueur123)">
+  <h1>GAMING</h1>
 
-  <button onclick="alert('Simulation ! Ne saisis jamais ton vrai mot de passe sur un lien inconnu.')">
+  <p class="notice">
+    SIMULATION ÉDUCATIVE
+  </p>
+
+  <p>
+    Bienvenue dans notre démonstration !
+  </p>
+
+  <input
+    type="text"
+    id="pseudo"
+    placeholder="Entre un pseudo fictif"
+    maxlength="20"
+  >
+
+  <button onclick="demonstration()">
     Tester la démonstration
   </button>
 
-  <p class="notice">
-    Aucun identifiant ni mot de passe n'est collecté.
+  <p class="notice" id="message">
+    Utilise uniquement un pseudo inventé.
   </p>
+
+  <footer>
+    Projet indépendant et non officiel.
+    Aucun mot de passe n'est demandé ou enregistré.
+  </footer>
+
 </div>
+
+<script>
+function demonstration() {
+  const pseudo = document.getElementById("pseudo").value.trim();
+  const message = document.getElementById("message");
+
+  if (!pseudo) {
+    message.textContent = "Entre un pseudo fictif pour continuer.";
+    return;
+  }
+
+  message.textContent =
+    "Bonjour " + pseudo +
+    " ! Ceci est une simulation éducative. Ne partage jamais ton mot de passe.";
+}
+</script>
+
 </body>
+</html>
+
 </html>
